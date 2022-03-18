@@ -525,8 +525,8 @@ footer .copyright{font-size: 6px;text-align: center;padding-top: 5px;color: #fff
     footer .sns .ka{display: none;}
     footer p.copyright{
         position: absolute;
-        top: 174px;
-        left: 170px;
+        top: 190px;
+        left: 180px;
         color: #fff;
     }
     footer{height: 220px;}
@@ -809,7 +809,7 @@ footer .copyright{font-size: 6px;text-align: center;padding-top: 5px;color: #fff
     footer p.copyright{
         position: absolute;
         top: 220px;
-        left: 500px;
+        left: 445px;
     }
     footer{height: 250px;}
 
