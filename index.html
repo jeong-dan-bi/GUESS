@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUESS</title>
+     <!-- 브라우저  reset-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset@1.5.1/css/reset.min.css">
+
+     <!-- 구글폰트 설정 -->
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+ 
+     <!-- 구글 material icon 설정 -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ 
+     <!-- main css -->
+     <link rel="stylesheet" href="css/comom.css">
+     <link rel="stylesheet" href="css/jquery.bxslider.css">
+     <link rel="shortcut icon" href="favicon.ico">
+
+     <!-- lodash -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+     <!-- gsap 에니메이션 제어  $ 탑버튼-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js" integrity="sha512-agNfXmEo6F+qcj3WGryaRvl9X9wLMQORbTt5ACS9YVqzKDMzhRxY+xjgO45HCLm61OwHWR1Oblp4QSw/SGh9SA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     
+     <!-- swiper slider cdn -->
+     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js" integrity="sha512-WlN87oHzYKO5YOmINf1+pSkbt4gm+lOro4fiSTCjII4ykJe/ycHKIaa9b2l9OMkbqEA4NxwTXAGFjSXgqEh19w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+     <!-- 스크롤이벤트 -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     
+</head>
+<body>
+    <header>
+        <h1><a href="index.html"><img src="images/lo-removebg-preview.png" alt="GUESS"></a></h1>
+
+        <!-----nav----->
+        
+        <nav class="menu">
+			<ul class="gnb">
+				<li><a href="#">WOMEN</a>
+                    <ul class="submenu">
+                        <li><a href="#">COATS/JACKETS</a></li>
+                        <li><a href="#">T-SHIRTS</a></li>
+                        <li><a href="#">SHIRTS/SWEATER</a></li>
+                        <li><a href="#">DRESS/SKIRT</a></li>
+                        <li><a href="#">PANTS/SHORTS</a></li>
+                        <li><a href="#">DENIM</a></li>
+                    </ul>
+                </li>
+				<li><a href="#">MEN</a>
+                    <ul class="submenu">
+                        <li><a href="#">COATS/JACKETS</a></li>
+                        <li><a href="#">T-SHIRTS</a></li>
+                        <li><a href="#">SHIRTS/SWEATER</a></li>
+                        <li><a href="#">PANTS/SHORTS</a></li>
+                        <li><a href="#">DENIM</a></li>
+                    </ul>
+                </li>
+				<li><a href="#">DENIM</a>
+                    <ul class="submenu">
+                        <li><a href="#">STRAIGHT</a></li>
+                        <li><a href="#">BOOTCUT</a></li>
+                        <li><a href="#">SKINNY</a></li>
+                        <li><a href="#">SHORTS</a></li>
+                        <li><a href="#">WIDE</a></li>
+                    </ul></li>
+				<li><a href="#">BAG</a>
+                    <ul class="submenu">
+                        <li><a href="#">MEN'S BAG</a></li>
+                        <li><a href="#">HANDBAG</a></li>
+                    </ul></li>
+			</ul>
+            <div class="search">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                </ul>
+            </div>
+		</nav>
+
+        <!-- pc-nav -->
+        <nav class="pc-menu">
+			<ul class="gnb">
+				<li><a href="#">WOMEN</a>
+                    <ul class="submenu">
+                        <li><a href="#">COATS/JACKETS</a></li>
+                        <li><a href="#">T-SHIRTS</a></li>
+                        <li><a href="#">SHIRTS/SWEATER</a></li>
+                        <li><a href="#">DRESS/SKIRT</a></li>
+                        <li><a href="#">PANTS/SHORTS</a></li>
+                        <li><a href="#">DENIM</a></li>
+                    </ul>
+                </li>
+				<li><a href="#">MEN</a>
+                    <ul class="submenu">
+                        <li><a href="#">COATS/JACKETS</a></li>
+                        <li><a href="#">T-SHIRTS</a></li>
+                        <li><a href="#">SHIRTS/SWEATER</a></li>
+                        <li><a href="#">PANTS/SHORTS</a></li>
+                        <li><a href="#">DENIM</a></li>
+                    </ul>
+                </li>
+				<li><a href="#">DENIM</a>
+                    <ul class="submenu">
+                        <li><a href="#">STRAIGHT</a></li>
+                        <li><a href="#">BOOTCUT</a></li>
+                        <li><a href="#">SKINNY</a></li>
+                        <li><a href="#">SHORTS</a></li>
+                        <li><a href="#">WIDE</a></li>
+                    </ul></li>
+				<li><a href="#">BAG</a>
+                    <ul class="submenu">
+                        <li><a href="#">MEN'S BAG</a></li>
+                        <li><a href="#">HANDBAG</a></li>
+                    </ul></li>
+			</ul>
+            <div class="search">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                </ul>
+            </div>
+		</nav>
+
+        <div class="search-icon">
+            <input type="text">
+            <span class="material-icons">search</span>
+            <span class="material-icons two">perm_identity</span>
+        </div>
+        
+        <div class="inner"></div>
+
+            <!-- 햄버거메뉴 -->
+            <span class="menu-toggle-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+          </div>
+    </header>
+      <!-- tab&mo 햄버거메뉴 펼쳐질때 검은색배경 -->
+      <div class="slide-fade"></div>
+
+      <!--------pc_slide버전 (BXslide)-------->
+      <section class="slide-pc">
+        <h2 class="hidden">BXslide</h2>
+        <div class="bxslider">
+            <div><img src="images/pc-slide1.jpg" alt="slide1"></div>
+            <div><img src="images/pc-slide2.jpg" alt="slide2"></div>
+          </div>
+           <!-- 버튼 -->
+           <div class="swiper-prev"><span class="material-icons">arrow_back</span></div>
+           <div class="swiper-next"><span class="material-icons">arrow_forward</span></div>
+    </section>
+
+     <!--------mo-tab_slide버전 (Swipe slide)-------->
+     <section class="slide-mo">
+        <h2 class="hidden">Swipe slide</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/mo-slide1.jpg" alt="slide1"></div>
+              <div class="swiper-slide"><img src="images/mo-slide2.jpg" alt="slide2"></div>
+            </div>
+          </div>
+           <!-- 버튼 -->
+           <div class="swiper-prev"><span class="material-icons">arrow_back</span></div>
+           <div class="swiper-next"><span class="material-icons">arrow_forward</span></div>
+     </section>
+
+     <!-------TODAY BEST------->
+     <section class="today-best">
+         <h2>TODAY BEST</h2>
+         <div class="inner">
+             <ul>
+                 <li><a href="/"><img src="images/pc-best1.jpg" alt="여성 인디고 구제 스트레이트"></a>
+                    <p>인디고 구제 스트레이트<br><span>168,000</span><span class="w"> 원</span></p></li>
+
+                 <li><a href="/"><img src="images/pc-best2.jpg" alt="아가일체크 크롭 가디건"></a>
+                    <p>아가일체크 크롭 가디건<br><span>88,200</span><span class="w"> 원</span></p></li>
+
+                 <li><a href="/"><img src="images/pc-best3.jpg" alt="남성MARC 가디건"></a>
+                    <p>남성MARC 가디건<br><span>97,200</span><span class="w"> 원</span></p></li>
+
+                 <li><a href="/"><img src="images/pc-best4.jpg" alt="L톤 크롭와이드"></a>
+                    <p>[최우식착용] 크롭와이드<br><span>59,000</span><span class="w"> 원</span></p></li>
+
+                 <li><a href="/"><img src="images/pc-best5.jpg" alt="레터링 스웨터 가디건"></a>
+                    <p>레터링 스웨터 가디건<br><span>138,000</span><span class="w"> 원</span></p></li>
+
+                 <li><a href="/"><img src="images/pc-best6.jpg" alt="스트라이프 반팔티"></a>
+                    <p>[수지착용] 스트라이프 반팔티<br><span>68,000</span><span class="w"> 원</span></p></li>
+             </ul>
+         </div> 
+     </section>
+
+     <!-- 신상데님팬츠 영역 -->
+     <section id="slide-pc">
+       <div class="back-pc">
+        <div class="inner wrap">
+        <h2 class="hidden"></h2><p class="denim">신상데님팬츠</p>
+        <p class="pc-new">“2022 신상 잇아이템<span> 10% </span> 할인”</p>
+        <div class="newbanner"><img src="images/pc_new0.jpg" alt="2022 s/s 신상 DENIM"></div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/pc_new1.jpg" alt="여성 L톤 슬림붓컷">
+                <p class="new-name">여성 L톤 슬림붓컷</p>
+                <p class="sale">161,200원 <span> 10%</span></p>
+            </div>
+              <div class="swiper-slide"><img src="images/pc_new2.jpg" alt="남성 M톤 릴렉스테이퍼">
+                <p class="new-name">M톤 릴렉스테이퍼</p>
+                <p class="sale">178,200원 <span> 10%</span></p>
+            </div>
+              <div class="swiper-slide"><img src="images/pc_new3.jpg" alt="남성 저온스 D톤 슬림스트레이트">
+                <p class="new-name"> D톤 슬림스트레이트</p>
+                <p class="sale">133,200원 <span> 10%</span></p>
+            </div>
+              <div class="swiper-slide"><img src="images/pc_new4.jpg" alt="여성 인디고 절개 맘핏">
+                <p class="new-name">인디고 절개 맘핏</p>
+                <p class="sale">151,200원 <span> 10%</span></p>
+            </div>
+              <div class="swiper-slide"><img src="images/pc_new5.jpg" alt="M톤 와이드">
+                <p class="new-name">M톤 와이드</p>
+                <p class="sale">78,400원 <span> 10%</span></p>
+                
+            </div>
+              <div class="swiper-slide"><img src="images/pc_new6.jpg" alt="여성 M톤 슬림스트레이트">
+                <p class="new-name">M톤 슬림스트레이트</p>
+                <p class="sale">151,200원 <span> 10%</span></p>
+            </div>
+              <div class="swiper-slide"><img src="images/pc_new7.jpg" alt="그레이 본딩 슬림스트레이트">
+                <p class="new-name">본딩 슬림스트레이트</p>
+                <p class="sale">151,200원 <span> 10%</span></p>
+            </div>
+              <div class="swiper-slide"><img src="images/pc_new8.jpg" alt="인심트임 슬림스트레이트">
+                <p class="new-name">트임 슬림스트레이트</p>
+                <p class="sale">151,200원 <span> 10%</span></p>
+            </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+            <div class="swiper-prev">
+                <span class="material-icons">arrow_back </span>
+            </div>
+            <div class="swiper-next">
+                <span class="material-icons">arrow_forward</span>       
+             </div>
+        </div>
+       </div>
+     </section>
+
+     <section class="mo">
+      <div class="back">
+        <h2>신상데님팬츠</h2>
+        <p class="mo__new">“2022 신상 잇아이템<span> 10% </span>할인”</p>
+        <div class="new inner">
+            <div class="new-item"><img src="images/pc_new1.jpg" alt="여성 L톤 슬림붓컷">
+              <p class="new-name">여성 L톤 슬림붓컷</p>
+              <p class="sale">161,200원 <span>10%</span></p>
+          </div>
+            <div class="new-item"><img src="images/pc_new2.jpg" alt="남성 M톤 릴렉스테이퍼">
+              <p class="new-name">M톤 릴렉스테이퍼</p>
+              <p class="sale">178,200 <span>10%</span></p>
+          </div>
+            <div class="new-item"><img src="images/pc_new3.jpg" alt="남성 저온스 D톤 슬림스트레이트">
+              <p class="new-name">저온스 D톤 슬림스트레이트</p>
+              <p class="sale">133,200 <span>10%</span></p>
+          </div>
+            <div class="new-item"><img src="images/pc_new4.jpg" alt="여성 인디고 절개 맘핏">
+              <p class="new-name">인디고 절개 맘핏</p>
+              <p class="sale">151,200 <span>10%</span></p>
+          </div>
+          </div>
+      </div>
+     </section>
+
+     <!--2022 S/S MEN's BAG COLLECTION 영역-->
+     <section class="man-bag scroll-spy">
+         <div class="inner">
+             <div class="collection">
+                 <h2>2022 S/S</h2><p>MEN's BAG COLLECTION</p>
+
+                 <!-- 남자가방 소개이미지 -->
+                 <div class="collection-banner">
+                    <img src="images/men-benner.jpg" alt="men-banner">
+                    <p><img src="images/man-background-text.jpg" alt=""></p>
+                 </div>
+                 <div class="collection__text">
+                    <img src="images/collection-text.jpg" alt="GUESS-ECO" class="eco back-to-position to-right">
+                    <div class="more back-to-position to-right" >
+                        <a href="/" class="btn">자세히 보기</a>
+                    </div>
+                </div>
+             </div>
+
+             <!-- 베스트 남자가방 컬렉션 -->
+         <div class="collection-bag">
+            <div class="inner">
+                <div class="collection-bag-kind">
+                    <img class="top back-to-position to-right delay-3" src="images/man-bag1.jpg" alt="VEZZOLA SPECLAL_clutch">
+                    <p class="man-bag-name">VEZZOLA SPECLAL_clutch</p>
+                    <p class="sale2">53,100원 <span>10%</span></p>
+                   </div>
+                   <div class="collection-bag-kind">
+                    <img src="images/man-bag2.jpg" alt="SALAMEDA BACKPACK_DBL" class="back-to-position to-right delay-3">
+                    <p class="man-bag-name">SALAMEDA BACKPACK_DBL</p>
+                    <p class="sale2">98,100원 <span>10%</span></p>
+                   </div>
+                   <div class="collection-bag-kind hide">
+                    <img class="top back-to-position to-left delay-3" src="images/man-bag3.jpg" alt="CERTOSA NYLON SMART">
+                    <p class="man-bag-name">CERTOSA NYLON SMART</p>
+                    <p class="sale2">125,100원 <span>10%</span></p>
+                   </div>
+                   <div class="collection-bag-kind hide">
+                    <img src="images/man-bag4.jpg " alt="VICE BACKPACK_BLK" class="back-to-position to-left delay-3">
+                    <p class="man-bag-name ">VICE BACKPACK_BLK</p>
+                    <p class="sale2">98,100원 <span>10%</span></p>
+                   </div>
+            </div>
+          </div>
+          <div id="moreBtn" onclick="showMore()">more</div>
+         </div>
+     </section>
+
+     <!-- fixed영역 -->
+     <section class="fixe scroll-spy">
+         <div class="inner">
+             <div class="text-area">
+                 <img src="images/fixed_text.png" alt="Denim of the Day" class="back-to-position to-right delay-3">
+             </div>
+         </div>
+     </section>
+
+     <!-- last 이미지 영역 -->
+     <section class="last">
+        <div class="inner">
+           <div class="daily">
+                <img src="images/last-img1.jpg" alt="EVERYDAY DAILY">
+            <div class="more1">
+               <a href="/" class="btn-blue">MORE VIEW</a>
+           </div>
+            <img src="images/last-img2.jpg" alt="ALLDAY DENIM">
+            <div class="more1">
+               <a href="/" class="btn-blue">MORE VIEW</a>
+           </div>
+           </div>
+        </div>
+     </section>
+
+     <!-- footer -->
+     <footer>
+         <div class="inner">
+             <div class="logo"><img src="images/footer-logo.png" alt="GUESS "></div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="/">회사소개</a></li>
+                    <li><a href="/">매장안내</a></li>
+                    <li><a href="/">개인정보처리방침</a></li>
+                    <li><a href="/">이용약관</a></li>
+                    <li><a href="/">고객센터</a></li>
+                </ul>
+            </nav>
+
+            <address class="info">
+                <span>게스홀딩스코리아유한회사서울특별시 강남구 테헤란로 534 <br> </span>
+                <span>대표이사: 제임스윤영박 <br> </span>
+                <span>사업자 등록번호: 211-87-83034통신판매업 2013-서울강남-01681 </span>
+            </address>
+
+            <div class="sns">
+                <img class="sns__S" src="images/footer-sns.png" alt="sns">
+                <div class="sns__num">
+                    <span class="time">쇼핑몰 관련문의: 1544-7665 <p>(주문,배송문의)  AM 10:00 ~ PM 5:00</p> <br> </span>
+                    <span class="ka">AM 10:00 ~ PM 5:00카카오톡 상담: 게스코리아 (A/S문의만가능)</span>
+                </div>
+            </div>
+
+            <p class="copyright">COPYRIGHT $copy; GUESSKOREA. ALL RIGHTS RESERVED.</p>
+
+         </div>
+     </footer>
+
+      <!-- top button -->
+    <div id="to-top">
+        <div class="top-button"><a href="/"><img src="images/top_button.png" alt="top_button"></a></div>
+        <!-- <div class="material-icons">arrow_upward</div> -->
+    </div>
+
+
+
+     <script src="js/jquery.min.js"></script>
+     <script src="js/swiper.min.js"></script>
+     <script src="js/jquery.bxslider.min.js"></script>
+     <script src="js/comon.js"></script>
+     <script src="js/index.js"></script>
+</body> 
+</html>

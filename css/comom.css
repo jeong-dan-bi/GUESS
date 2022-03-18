@@ -1,0 +1,818 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap');
+/* noto sans  400 & 700*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+*{margin: 0;padding: 0;}
+body{
+    color: #333;
+    font-size: 16px;
+    line-height: 1.4;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Noto Sans';
+}
+img{display: block;}
+.hidden{display: none;}
+.btn{
+    display: block;
+    width: 130px;
+    padding: 10px;
+    border: 2px solid #507D6C;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    transition: all 0.4s;
+    box-sizing: border-box;
+}
+.btn:hover{
+    background-color: #507D6C;
+    color: #fff;
+}
+.btn-blue{
+    display: block;
+    width: 130px;
+    padding: 10px;
+    border: 2px solid #253d87;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    transition: all 0.4s;
+    box-sizing: border-box;
+}
+.btn-blue:hover{
+    background-color: #253d87;
+    color: #fff;
+}
+
+
+/* -----------mobile-----------*/
+.slide-pc{display: none;}
+.inner{width: 80%; max-width: 1132px; margin: auto;}
+.search-icon{display: none;}
+.pc-menu{display: none;}
+header{
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+header h1{width: 100%;height: 30px;position: absolute;left: 40%;bottom: 1px;}
+header h1 img{width: 100px;}
+
+/* menu-toggle-btn (햄버거 메뉴)*/
+header .menu-toggle-btn{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+header .menu-toggle-btn span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #253d87;
+}
+header .menu-toggle-btn span:nth-child(2){margin: 5px 0;}
+
+/* mo-nav메뉴*/
+nav.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #253d87;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translateX(-300px);
+    z-index: 5;
+}
+/* ----------js변수------- */
+nav.menu.ison{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+nav.menu ul.gnb{margin-top: 20px;}
+nav.menu ul.gnb > li{
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
+}
+nav.menu ul.gnb > li > a{font-size: 18px;} /*1차메뉴*/
+nav.menu ul.gnb a{
+    display: block;
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    text-indent: 10px;
+}
+
+nav.menu ul.submenu{display: none;}
+nav.menu ul.submenu li a{ /*2차메뉴*/
+    text-indent: 25px; /*안쪽으로 들여쓰기*/
+    font-size: 14px;
+}
+
+/* search */
+nav.menu .search ul{
+    display: flex;
+    justify-content: center;
+}
+nav.menu .search ul li a{
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    margin: 0 10px;
+}
+/* ------nav메뉴 펼쳐질때 검은색배경-------*/
+div.slide-fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 4;
+    visibility: hidden; /*흔적있이 안보이게*/
+    opacity: 0;
+}
+/* ----------js변수------- */
+div.slide-fade.ison{
+    opacity: 0.5;
+    visibility: visible; /*다시 보이게 */
+}
+
+/* 슬라이드 버튼 */
+.slide-mo .swiper-prev,
+.slide-mo .swiper-next{
+    width: 42px;
+    height: 42px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 600px;
+    margin: auto;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide-mo .swiper-prev{left: 0;}
+.slide-mo .swiper-next{right: 0;}
+.slide-mo .swiper-prev .material-icons,
+.slide-mo .swiper-next .material-icons{color: #253d87;}
+/* ===================================================================================== */
+/* -----TODAY BEST----- */
+.today-best h2{
+    font-size: 22px;
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+.today-best ul{ display: flex;flex-wrap: wrap;justify-content: space-between;}
+.today-best ul li{margin-top: 20px;}
+.today-best ul li p{font-size: 12px;margin-top: 10px;}
+.today-best ul li p span{font-size: 13px;}
+.today-best ul li p span.w{font-size: 12px;color: rgb(88, 88, 88);}
+.today-best img{
+    width: 180px;
+}
+
+/* -----신상데님팬츠 영역----- */
+#slide-pc{display: none;}
+.back{width: 100%;height: 930px;background-color: rgb(238, 238, 238);}
+.mo .new img{width: 180px;}
+.mo h2, .mo .mo__new{text-align: center;}
+.mo h2{margin: 40px 0 0 0;padding-top: 10px; font-weight: bold;font-size: 17px;}
+.mo__new{margin: 7px 0 20px 0; font-size: 15px;}
+.mo__new span,
+.new .sale span{color: red;}
+.mo .new{display: flex;flex-wrap: wrap;justify-content: space-between;}
+.new .new-name{font-size: 12px; margin-top: 7px;}
+.new .sale{font-size: 11px;}
+.new div:nth-child(3),
+.new div:nth-child(4){margin-top: 20px;}
+.more1 .btn-long{position: relative; top: 120px; right: 110px; margin-top: 20px;}
+
+
+/* 2022 S/S MEN's BAG COLLECTION 영역 */
+
+.man-bag .collection h2,.man-bag .collection p{text-align: center;}
+.man-bag .collection h2{margin-top: 50px;}
+.man-bag .collection img{margin-top: 50px;}
+.man-bag .collection .more{padding-left: 130px;margin: 5px 0 20px 0;}
+.collection .collection-banner p{width: 400px;position: relative;bottom: 60px;}
+.collection__text{position: relative;bottom: 40px;}
+.collection__text img{width: 355px;padding-left: 50px;}
+.more{position: relative;top: 20px;}
+
+/* 2022 S/S MEN's BAG COLLECTION 영역 */
+.collection-bag{padding-top: 10px;}
+.collection-bag img{width: 300px; }
+.collection-bag{display: flex;justify-content: space-between; align-items: center;}
+.collection-bag-kind .man-bag-name{font-size: 15px; margin-top: 10px; text-align: center;}
+.collection-bag-kind .sale2{font-size: 14px; text-align: center; margin-bottom: 20px;}
+.collection-bag-kind .sale2 span{color: red;}
+.collection-bag-kind:nth-child(3),
+.collection-bag-kind:nth-child(4){margin-top: 20px;}
+
+.fixe{display: none;}
+
+.last{margin-top: 50px;}
+.more1 {position: relative;bottom: 100px;left: 120px;}
+.hide{display: none;}
+/* 버튼 */
+.hide{display: none;}
+#moreBtn{
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    background-color: rgba(87, 87, 87, 0.5);
+    border-radius: 30px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+/* 공지사항 영역 */
+.notice{display: none;}
+
+/* footer */
+footer .menu, footer .logo,
+footer .info{display: none;}
+footer{width: 100%;height: 140px;background: #B6C8E4;}
+footer .sns img{width: 120px;position: relative;top: 80px;left: 35%;}
+footer .sns span{font-size: 11px;}
+footer .sns span.time{padding-left: 130px;}
+footer .sns span p{text-align: center;}
+footer .sns span.ka{margin-left: 40px; position: relative; bottom: 15px;}
+.sns__num{position: relative;bottom: 26px;}
+footer .copyright{font-size: 6px;text-align: center;padding-top: 5px;color: #fff;}
+#to-top{
+    color: #fff;
+    position: fixed;
+    bottom: 120px;
+    right: 0;
+}
+
+/* -----------tab-----------*/
+@media all and (min-width : 768px){
+    /* body{background-color: rgb(250, 150, 220);} */
+    .pc-menu{display: none;}
+    header{position: fixed;}
+    header h1{position: absolute;bottom: 30px;left: 43%;}
+    .search-icon{display: block;}
+    /* scroll 효과*/
+    .back-to-position{
+        opacity: 0;
+        transition: 1s;
+    }
+    .back-to-position.to-right{
+        transform: translateX(-150px);
+    }
+    .back-to-position.to-left{
+        transform: translateX(150px);
+    }
+    .show .back-to-position{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    /* 시간차 등장 모션 */
+    .show .back-to-position.delay-0{transition-delay: 0s;}
+    .show .back-to-position.delay-1{transition-delay: 0.3s;}
+    .show .back-to-position.delay-2{transition-delay: 0.5s;}
+    .show .back-to-position.delay-3{transition-delay: 0.9s;}
+
+    header .search-icon{
+        height: 34px;
+        position: relative;
+        top: 7px;
+        right: 50px;
+    }
+    header .search-icon .two{position: absolute; left: 815px;}
+   
+    header .search-icon input{
+        width: 36px;
+        height: 34px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        transition: all 0.4s;
+        position: absolute;
+        right: 0;
+        opacity: 0.7;
+    }
+    header .search-icon input:focus{
+        width: 190px;
+        border-color: #253d87;
+    }
+    /* input 상자안에 돋보기 정가운데로*/
+    header .search-icon .material-icons{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        transition: opacity .6s;
+    }
+    /*돋보기 클릭 시 사라지기 */
+    header .search-icon.focused .material-icons{opacity: 0;}
+   
+    .inner{
+        width: 90%px;
+        margin: auto;
+        position: relative;
+    }
+
+    /* 슬라이드 버튼 */
+.slide-mo .swiper-prev,
+.slide-mo .swiper-next{
+    width: 42px;
+    height: 42px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 400px;
+    margin: auto;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide-mo .swiper-prev{left: 0;}
+.slide-mo .swiper-next{right: 0;}
+.slide-mo .swiper-prev .material-icons,
+.slide-mo .swiper-next .material-icons{color: #253d87;}
+
+    .today-best{padding-top: 50px;}
+    .today-best h2{font-size: 25px; font-family: 'Old Standard TT', serif;}
+    .today-best img{
+        width: 180px;
+        padding-top: 20px;
+    }
+    .today-best img:hover{
+        transition: all 0.6s;
+        transform: scale(1.07);
+    }
+    .today-best ul li p{font-size: 14px;margin-top: 10px;}
+    .today-best ul li p span{font-size: 13px;}
+    .today-best ul li p span.w{font-size: 12px;color: rgb(88, 88, 88);}
+
+    /* swiper slide 영역 */
+    #slide-pc{display: block;}
+    .mo{display: none;}
+    #slide-pc .newbanner{display: none;}
+    
+    .back-pc{width: auto;height: 500px;background-color: #f5f5f5;padding-top: 30px;}
+    #slide-pc{margin-top: 100px;}
+    #slide-pc .denim, #slide-pc p.pc-new{text-align: center;}
+    #slide-pc .denim{font-size: 23px; font-family: 'Noto Sans', sans-serif; font-weight: bold;}
+    #slide-pc p.pc-new{
+        font-size: 15px; margin: 7px 0 15px 0;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    #slide-pc p.pc-new span{color: red;}
+    #slide-pc p.sale span{color: red; padding-left: 5px;}
+    #slide-pc  p.new-name{margin-top: 10px;margin-bottom: 3px;}
+    .new-name{font-size: 13px;}
+    .sale{font-size: 13px; display: flex;}
+
+    /* swiper 이전, 다음버튼 */
+    #slide-pc .swiper-prev,
+    #slide-pc .swiper-next{
+    position: absolute;
+    top: 300px;
+    color: #253d87;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    border: 1px solid #253d87;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s;
+    }
+    #slide-pc .swiper-prev{
+    left: -5%;
+    margin-left: 4px
+    }
+    #slide-pc .swiper-next{
+    right: 50%;
+    margin-right: -345px;
+    }
+    #slide-pc .swiper-prev:hover,
+    #slide-pc .swiper-next:hover{
+    background-color: #253d87;
+    color: #fff;
+    }
+    
+    /* 2022 S/S MEN's BAG COLLECTION 영역 */
+    .man-bag h2, .man-bag .collection p{
+        font-family: 'Old Standard TT', serif;
+    }
+    .man-bag{position: relative;}
+    .collection .collection-banner{width: 320px;position: absolute;right: 0;}
+    .collection-banner p{position: absolute;right: 40px;}
+    .collection .collection__text img{width: 300px;position: absolute; left: -45px;top: 25px;}
+    .collection .collection__text .more{position: absolute;top: 280px; left: -90px;}
+    .collection-bag-kind{font-family: 'Noto Sans', sans-serif;}
+    .collection-bag-kind p.man-bag-name{font-size: 14px; font-weight: 500;}
+    .collection-bag-kind p.sale2{padding-top: 3px;}
+
+    /* more버튼 삭제 */
+    .man-bag #moreBtn{display: none;}
+    .hide{display: block;}
+
+    .collection-bag{
+        background: url(../images/man-bag-backgroun.jpg)no-repeat center;
+        background-size: 800px;
+        width: 800px;
+        height: 550px;
+        position: relative;
+        right: 81px;
+        top: 200px;
+    }
+    
+    .collection-bag .collection-bag-kind{
+        width: 130px;
+        float: left;
+        margin: 0;
+        margin-right: 30px;
+    }
+    .collection-bag-kind .top{
+        position: relative;
+        bottom: 20px;
+    }
+    
+
+
+    /* fixe */
+    .fixe{display: block;}
+    .fixe{
+        clear: both;
+        background: url(../images/fixed.jpg)no-repeat center fixed;
+        background-size: 800px;
+        width: 800px;
+        height: 300px;
+        position: relative;
+        top: 130px;
+    }
+    .fixe .text-area{width: 240px; position: absolute; top: 80px;}
+
+    /* last 이미지 영역 */
+    .last{clear: both;}
+    .last .daily{
+        display: flex; justify-content: space-around;
+        position: relative; top: 150px;
+    }
+    .last img{
+        width: 290px; height: 290px;
+        margin-bottom: 220px;
+    }
+    .more1{
+        position: absolute;top: 180px; left: 95px;
+    }
+    .more1:nth-child(2){position: absolute; left: 420px;}
+
+
+    /* footer */
+    footer{position: relative;}
+    footer .menu, footer .info, footer .logo{display: block;}
+    footer .logo{
+        width: 60px;
+        position: absolute;
+        top: 15px;
+    }
+    footer nav ul.menu{
+        font-size: 12px;
+        display: flex;
+        position: absolute;
+        top: 25px;
+        left: 150px;
+    }
+    footer .menu li:hover{text-decoration: underline;}
+    footer nav ul.menu li{margin-right: 15px;}
+    footer .info{
+        font-size: 10px;
+        position: absolute;
+        top: 100px;
+        line-height: 2;
+    }
+    footer .sns{
+        position: absolute;
+        top: 120px;
+        left: 350px;
+        font-size: 8px;
+        line-height: 2;
+    }
+    footer .sns .time p{
+        position: absolute;
+        left: 88px;
+    }
+    footer .sns .sns__S{display: none;}
+    footer .sns .ka{display: none;}
+    footer p.copyright{
+        position: absolute;
+        top: 174px;
+        left: 170px;
+        color: #fff;
+    }
+    footer{height: 220px;}
+
+}
+
+
+/* -----------pc-----------*/
+@media all and (min-width : 1900px){
+    /* -----------spay----------- */
+.back-to-position{
+    opacity: 0;
+    transition: 1s;
+}
+.back-to-position.to-right{
+    transform: translateX(-150px);
+}
+.back-to-position.to-left{
+    transform: translateX(150px);
+}
+.show .back-to-position{
+    opacity: 1;
+    transform: translateX(0);
+}
+/* 시간차 등장 모션 */
+.show .back-to-position.delay-0{transition-delay: 0s;}
+.show .back-to-position.delay-1{transition-delay: 0.3s;}
+.show .back-to-position.delay-2{transition-delay: 0.5s;}
+.show .back-to-position.delay-3{transition-delay: 0.9s;}
+
+
+    
+    .inner{
+        width: 1500px;
+        margin: auto;
+        position: relative;
+    }
+    .slide-mo, nav.menu, .menu-toggle-btn, .search{display: none;}
+    .pc-menu{display: block;}
+    .slide-pc{display: block;}
+    header h1{position: absolute;top: 0;}
+    header h1{position: absolute; left: 20px;}
+    header h1 img{width: 135px; position: relative; bottom: 30px;}
+    header .search-icon{position: absolute; top: 30px; right: 50px;}
+    header .search-icon .two{position: absolute; left: 10px;}
+    /* menu */
+    header .pc-menu{
+        width: 680px;
+        height: 100px;
+        /* min-width: 1200px; */
+        margin: auto;
+        text-align: center;
+    }
+    header .pc-menu{
+        position: relative;
+        padding-left: 50px;
+        margin-top: 20px;
+    }
+    header .pc-menu ul li{
+        width: 155px;
+        height: 50px;
+    }
+    /* 공통 */
+    header nav.pc-menu ul.submenu{
+        width: 150px;
+        height: 290px;
+        background: rgba(255, 255, 255, 0.5);
+        /* border: 2px solid #adc1fa; */
+        margin-top: 10px;
+    }
+    header .pc-menu ul.submenu{padding-top: 3px;}
+    header .pc-menu ul.submenu li:first-child{margin-top: 15px;}
+    header .pc-menu ul.gnb > li{float: left;}
+    header .pc-menu ul.gnb > li > a{
+        color: #333;
+        font-weight: bold;
+        transition: all 0.3s;
+    }
+    header .pc-menu ul.submenu li a{
+        transition: all 0.3s;
+    }
+    header .pc-menu ul.submenu{display: none;}
+
+
+    header .pc-menu ul.submenu li a:hover{
+       color: #253d87;
+       font-weight: bold;
+    }
+
+    /* 슬라이드 버튼 */
+.slide-pc .swiper-prev,
+.slide-pc .swiper-next{
+    width: 42px;
+    height: 42px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 200px;
+    margin: auto;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide-pc .swiper-prev{left: 0;}
+.slide-pc .swiper-next{right: 0;}
+.slide-pc .swiper-prev .material-icons,
+.slide-pc .swiper-next .material-icons{color: #253d87;}
+    
+    /* best */
+    .today-best h2{font-size: 25px; font-family: 'Old Standard TT', serif;}
+    /* /* .today-best img:hover{
+        transition: all 0.6s;
+        transform: scale(1.07);
+    } */
+   */
+ 
+
+    /* swiper slide */
+    #slide-pc{position: relative;}
+    #slide-pc .newbanner{display: block;}
+    #slide-pc .newbanner{
+        width: 200px;
+        position: absolute;
+        
+    }
+    .back-pc{width: auto;height: 660px;background-color: #f5f5f5;padding-top: 30px;}
+    .swiper{
+        width: 900px;
+        position: absolute;
+        top: 30px;
+        left: 100px;
+    }
+    #slide-pc .swiper-prev{
+        left: -9%;
+        margin-left: 300px;
+        margin-top: 180px;
+        }
+        #slide-pc .swiper-next{
+        right: 34%;
+        margin-right: -390px;
+        margin-top: 180px;
+        }
+
+    .man-bag{position: relative;}
+    .man-bag h2, .man-bag .collection p{
+        font-family: 'Old Standard TT', serif;
+        font-size: 20px;
+    }
+    .collection{margin-top: 100px;}
+    .collection .collection-banner{width: 700px;position: absolute;right: 0;}
+    .collection .collection-banner p{width: 800px;position: relative;bottom: 60px;}
+    .collection .collection__text img{width: 400px;position: absolute; left: -45px;top: 25px;}
+    .collection .collection__text .more{position: absolute;top: 360px; left: -50px;}
+    /* 베스트 남자 가방 영역 */
+    .man-bag #moreBtn{display: none;}
+    .hide{display: block;}
+
+    .collection-bag .collection-bag-kind img:hover{
+        transition: all 0.6s;
+        transform: scale(1.1);
+    }
+    .collection-bag{
+        background: url(../images/man-bag-backgroun.jpg)no-repeat center;
+        width: 1920px;
+        height: 500px;
+        position: relative;
+        right: 400px;
+        top: 630px;
+        margin-bottom: 600px;
+    }
+    
+    .collection-bag .collection-bag-kind{
+        width: 280px;
+        float: left;
+        margin: auto;
+        padding-left: 30px;
+    }
+    .collection-bag .collection-bag-kind img{width: 220px;}
+    .collection-bag-kind .top{
+        position: relative;
+        bottom: 20px;
+    }
+.collection-bag-kind .man-bag-name{font-size: 15px; margin-top: 10px;}
+.collection-bag-kind .sale2{font-size: 14px;}
+.collection-bag-kind .sale2 span{color: red;}
+.collection-bag-kind:nth-child(2),
+.collection-bag-kind:nth-child(4){margin-top: 15px;}
+
+/* fixed */
+/* fixe */
+.fixe{display: block;}
+.fixe{
+    clear: both;
+    background: url(../images/fixed.jpg)no-repeat center fixed;
+    width: 1920px;
+    height: 500px;
+    position: relative;
+    top: 130px;
+}
+.fixe .text-area{width: 350px; position: absolute; top: 160px; right:1000px;}
+
+/* last img */
+ /* last 이미지 영역 */
+ .last{clear: both;}
+ .last .daily{
+     display: flex; justify-content: space-around;
+     position: relative; top: 150px;
+ }
+ .last img{
+     width: 600px; height: 550px;
+     margin-top: 100px;
+     margin-bottom: 300px;
+ }
+ .more1{
+     position: absolute;top: 180px; left: 95px;
+ }
+ .more1:nth-child(2){position: absolute; left: 420px;}
+ .more1{
+    position: absolute;top: 460px; left: 190px;
+ }
+.more1:nth-child(2){position: absolute; left: 800px;}
+
+/* last img */
+.last .daily img{margin-right: 20px; margin-bottom: 250px;}
+
+
+/* footer */
+     footer{width: 100%; position: relative;}
+    footer .menu, 
+    footer .info, 
+    footer .logo,
+    footer .sns .sns__num span.ka,
+    footer .sns img.sns__S{display: block;}
+    
+    footer .logo{
+        width: 70px;
+        position: absolute;
+        top: 15px;
+    }
+    footer nav ul.menu{
+        font-size: 14px;
+        display: flex;
+        font-weight: 700;
+        position: absolute;
+        top: 25px;
+        left: 370px;
+    }
+    footer .menu li:hover{text-decoration: underline;}
+    footer nav ul.menu li{margin-right: 20px;}
+    footer .info{
+        font-size: 14px;
+        position: absolute;
+        top: 100px;
+        left: 150px;
+        line-height: 2;
+    }
+    footer .sns{
+        position: absolute;
+        top: 90px;
+        left: 700px;
+        font-size: 8px;
+        line-height: 2;
+    }
+    footer .sns .sns__S{
+        position: relative;
+        top: 90px;
+        left: 160px;
+        width: 150px;
+    }
+    footer .sns .time{
+        position: absolute;
+        top: 15px;
+        font-size: 14px;
+    }
+    footer .sns .time p{width: 300px;}
+    footer .sns .ka{font-size: 14px;width: 500px;}
+    footer p.copyright{
+        position: absolute;
+        top: 220px;
+        left: 500px;
+    }
+    footer{height: 250px;}
+
+
+
+}

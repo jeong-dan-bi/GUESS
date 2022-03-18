@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+@media all and (min-width : 400px){
+.btn{
+    display: block;
+    width: 130px;
+    padding: 10px;
+    border: 2px solid #507D6C;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    transition: all 0.4s;
+    box-sizing: border-box;
+}
+.btn:hover{
+    background-color: #507D6C;
+    color: #fff;
+}
+.btn-blue{
+    display: block;
+    width: 130px;
+    padding: 10px;
+    border: 2px solid #253d87;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    transition: all 0.4s;
+    box-sizing: border-box;
+}
+.btn-blue:hover{
+    background-color: #253d87;
+    color: #fff;
+}
+.btn-long{
+    display: block;
+    width: 300px;
+    height: 34px;
+    padding: 10px;
+    border: 2px solid #253d87;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    transition: all 0.4s;
+    box-sizing: border-box;
+}
+.btn-long:hover{
+    background-color: #495883;
+    color: #fff;
+}
+/* -----------mobile-----------*/
+.slide-pc{display: none;}
+.inner{width: 80%; max-width: 1132px; margin: auto;}
+header{
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+header h1{width: 100%;height: 30px;position: absolute;left: 40%;bottom: 1px;}
+header h1 img{width: 100px;}
+
+/* menu-toggle-btn (햄버거 메뉴)*/
+header .menu-toggle-btn{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+header .menu-toggle-btn span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #253d87;
+}
+header .menu-toggle-btn span:nth-child(2){margin: 5px 0;}
+
+/* mo-nav메뉴*/
+nav.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #253d87;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translateX(-300px);
+    z-index: 5;
+}
+/* ----------js변수------- */
+nav.menu.ison{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+nav.menu ul.gnb{margin-top: 20px;}
+nav.menu ul.gnb > li{
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
+}
+nav.menu ul.gnb > li > a{font-size: 18px;} /*1차메뉴*/
+nav.menu ul.gnb a{
+    display: block;
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    text-indent: 10px;
+}
+
+nav.menu ul.submenu{display: none;}
+nav.menu ul.submenu li a{ /*2차메뉴*/
+    text-indent: 20px; /*안쪽으로 들여쓰기*/
+    font-size: 14px;
+}
+
+/* search */
+nav.menu .search ul{
+    display: flex;
+    justify-content: center;
+}
+nav.menu .search ul li a{
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    margin: 0 10px;
+}
+/* ------nav메뉴 펼쳐질때 검은색배경-------*/
+div.slide-fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 4;
+    visibility: hidden; /*흔적있이 안보이게*/
+    opacity: 0;
+}
+/* ----------js변수------- */
+div.slide-fade.ison{
+    opacity: 0.5;
+    visibility: visible; /*다시 보이게 */
+}
+
+/* ===================================================================================== */
+/* -----TODAY BEST----- */
+.today-best h2{
+    font-size: 22px;
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+.today-best ul{ display: flex;flex-wrap: wrap;justify-content: space-between;}
+.today-best ul li{margin-top: 20px;}
+.today-best ul li p{font-size: 12px;margin-top: 10px;}
+.today-best ul li p span{font-size: 13px;}
+.today-best ul li p span.w{font-size: 12px;color: rgb(88, 88, 88);}
+.today-best img{
+    width: 160px;
+}
+
+/* -----신상데님팬츠 영역----- */
+#slide-pc{display: none;}
+.back{width: 100%;height: 900px;background-color: rgb(238, 238, 238);}
+.mo .new img{width: 160px;}
+.mo h2, .mo .mo__new{text-align: center;}
+.mo h2{margin: 40px 0 0 0;padding-top: 10px; font-weight: bold;font-size: 17px;}
+.mo__new{margin: 7px 0 20px 0; font-size: 15px;}
+.mo__new span,
+.new .sale span{color: red;}
+.mo .new{display: flex;flex-wrap: wrap;justify-content: space-between;}
+.new .new-name{font-size: 12px; margin-top: 7px;}
+.new .sale{font-size: 11px;}
+.new div:nth-child(3),
+.new div:nth-child(4){margin-top: 20px;}
+.more1 .btn-long{position: relative; top: 120px; right: 110px; margin-top: 20px;}
+
+
+
+/* 2022 S/S MEN's BAG COLLECTION 영역 */
+.man-bag{background: url(../images/man-background-text.jpg) no-repeat center 250px;}
+.man-bag .collection h2,.man-bag .collection p{text-align: center;}
+.man-bag .collection h2{margin-top: 50px;}
+.man-bag .collection img{margin-top: 50px;}
+.man-bag .collection .more{padding-left: 110px;margin: 50px 0;}
+.collection__text img{width: 350px;padding-left: 50px;position: relative;top: 40px;}
+
+/* 2022 S/S MEN's BAG COLLECTION 영역 */
+.collection-bag img{width: 160px;}
+.collection-bag{display: flex;flex-wrap: wrap;justify-content: space-between;}
+.collection-bag-kind .man-bag-name{font-size: 12px; margin-top: 10px;}
+.collection-bag-kind .sale2{font-size: 11px;}
+.collection-bag-kind .sale2 span{color: red;}
+.collection-bag-kind:nth-child(3),
+.collection-bag-kind:nth-child(4){margin-top: 20px;}
+
+.fixe{display: none;}
+
+.last{margin-top: 50px;}
+.more1 {position: relative;bottom: 100px;left: 120px;}
+
+/* 공지사항 영역 */
+.notice{display: none;}
+}
