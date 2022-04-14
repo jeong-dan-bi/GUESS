@@ -36,7 +36,7 @@ new Swiper('.mySwiper', {
 
   window.addEventListener('scroll', 
     _.throttle(function(){
-        if(window.scrollY >400){
+        if(window.scrollY >500){
             // 상단으로 스크롤 보이기!!
             gsap.to(toTopEl, 0.2, {
                 x:0,

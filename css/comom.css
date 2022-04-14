@@ -261,7 +261,7 @@ footer .copyright{font-size: 6px;text-align: center;padding-top: 5px;color: #fff
 #to-top{
     color: #fff;
     position: fixed;
-    bottom: 120px;
+    bottom: 50px;
     right: 0;
 }
 
@@ -327,7 +327,7 @@ footer .copyright{font-size: 6px;text-align: center;padding-top: 5px;color: #fff
     header .search-icon.focused .material-icons{opacity: 0;}
    
     .inner{
-        width: 90%px;
+        width: 90%;
         margin: auto;
         position: relative;
     }
@@ -436,7 +436,7 @@ footer .copyright{font-size: 6px;text-align: center;padding-top: 5px;color: #fff
     .hide{display: block;}
 
     .collection-bag{
-        background: url(../images/man-bag-backgroun.jpg)no-repeat center;
+        background: url(../images/man-bag-backgroun.jpg) no-repeat center;
         background-size: 800px;
         width: 800px;
         height: 550px;
@@ -450,6 +450,8 @@ footer .copyright{font-size: 6px;text-align: center;padding-top: 5px;color: #fff
         float: left;
         margin: 0;
         margin-right: 30px;
+        position: relative;
+        left: 70px;
     }
     .collection-bag-kind .top{
         position: relative;
@@ -462,7 +464,7 @@ footer .copyright{font-size: 6px;text-align: center;padding-top: 5px;color: #fff
     .fixe{display: block;}
     .fixe{
         clear: both;
-        background: url(../images/fixed.jpg)no-repeat center fixed;
+        background: url(../images/fixed.jpg) no-repeat center fixed;
         background-size: 800px;
         width: 800px;
         height: 300px;
@@ -692,7 +694,7 @@ footer .copyright{font-size: 6px;text-align: center;padding-top: 5px;color: #fff
         transform: scale(1.1);
     }
     .collection-bag{
-        background: url(../images/man-bag-backgroun.jpg)no-repeat center;
+        background: url(../images/man-bag-backgroun.jpg) no-repeat center;
         width: 1920px;
         height: 500px;
         position: relative;
@@ -723,7 +725,7 @@ footer .copyright{font-size: 6px;text-align: center;padding-top: 5px;color: #fff
 .fixe{display: block;}
 .fixe{
     clear: both;
-    background: url(../images/fixed.jpg)no-repeat center fixed;
+    background: url(../images/fixed.jpg) no-repeat center fixed;
     width: 1920px;
     height: 500px;
     position: relative;
